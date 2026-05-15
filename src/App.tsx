@@ -9,11 +9,11 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-900 text-white selection:bg-purple-500/30">
-        <nav className="border-b border-gray-800">
+      <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-orange-500/30">
+        <nav className="border-b border-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="flex justify-center items-center py-6">
-              <Link to="/" className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 hover:from-purple-300 hover:to-blue-400 transition-all duration-300">
+              <Link to="/" className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-amber-500 hover:from-orange-300 hover:to-amber-400 transition-all duration-300">
                 Eywa.ai
               </Link>
             </div>
