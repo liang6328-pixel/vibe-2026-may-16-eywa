@@ -13,7 +13,7 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Chat:** A basic chat interface that allows users to interact with the Eywa AI.
 *   **Document Upload:** A feature to upload documents to the vault categories using Firebase Storage.
 *   **Vivid UI:** A visually engaging and modern user interface with a dark theme, vibrant accents, and a sticky navigation bar.
-*   **Pricing:** A detailed pricing page showcasing Free, Professional, and Family tiers.
+*   **Pricing Section:** A pricing section at the bottom of the home page showcasing "Free" and "Pro" (5 SGD/year) tiers.
 
 ## Completed Tasks
 
@@ -56,12 +56,18 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
     3.  Configured dynamic URL and identifier mapping to ensure correct thread loading across the SPA.
     4.  Integrated the component at the bottom of the main application layout.
 
-**Add Pricing and Navigation**
+**Remove Pricing Page**
 
-*   **Objective:** To provide users with clear plan options and improved site navigation.
+*   **Objective:** To remove the dedicated pricing page.
 *   **Steps:**
-    1.  Created a new `Pricing` page with a three-tier structure (Free, Professional, Family).
-    2.  Updated the navigation bar to include "Home" and "Pricing" links.
-    3.  Made the navigation bar sticky with a glassmorphism effect (backdrop-blur).
-    4.  Added a "Log In" button to the header to simulate authentication entry.
-    5.  Registered the new pricing route in the main `App` component.
+    1.  Deleted `src/pages/Pricing.tsx`.
+    2.  Removed the route and navigation link to the pricing page from `App.tsx`.
+
+**Add Pricing Section to Home Page**
+
+*   **Objective:** To add a pricing plan section at the bottom of the home page.
+*   **Steps:**
+    1.  Created a new `Pricing.tsx` component in the `src/components` directory.
+    2.  The component displays a "Free Tier" and a "Pro Tier" (5 SGD/year) with respective features.
+    3.  Integrated the `Pricing` component into the `Home.tsx` page.
+    4.  Updated the `blueprint.md` file to reflect the new feature.

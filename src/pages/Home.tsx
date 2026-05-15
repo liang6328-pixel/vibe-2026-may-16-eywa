@@ -11,6 +11,7 @@ import {
 import UploadModal from '../components/UploadModal';
 import { storage } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import Pricing from '../components/Pricing';
 
 const VAULT_STRUCTURE = {
   legal: {
@@ -185,6 +186,8 @@ const Home: React.FC = () => {
       </section>
 
       <UploadModal isOpen={isModalOpen} onClose={closeModal} onUpload={handleUpload} vaultName={selectedVault} />
+
+      <Pricing />
     </div>
   );
 };
