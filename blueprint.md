@@ -46,6 +46,11 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
     4.  Improved typography for a clearer visual hierarchy.
     5.  Refined the overall layout and spacing for a clean and balanced design.
 
-## Next Steps
+**Integrate Disqus Comments**
 
-*   Implement a feature to display a list of uploaded documents for each vault category.
+*   **Objective:** To enable community discussion and feedback on the platform.
+*   **Steps:**
+    1.  Implemented a `DisqusComments` component using the manual script injection method.
+    2.  Configured `disqus_config` to dynamically set the URL and identifier based on the current React route.
+    3.  Handled the Disqus reset logic to ensure comments reload correctly when navigating between pages in the SPA.
+    4.  Integrated the component at the bottom of the main application layout.
