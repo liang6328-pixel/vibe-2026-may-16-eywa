@@ -12,7 +12,7 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Styling:** A clean and modern user interface styled with Tailwind CSS.
 *   **Chat:** A basic chat interface that allows users to interact with the Eywa AI.
 *   **Document Upload:** A feature to upload documents to the vault categories using Firebase Storage.
-*   **Vivid UI:** A visually engaging and modern user interface with a dark theme, vibrant accents, and a sticky navigation bar.
+*   **Vivid UI:** A visually engaging and modern user interface with a warmer, lighter color scheme, and a sticky navigation bar.
 *   **Pricing Section:** A pricing section at the bottom of the home page showcasing "Free" and "Pro" (5 SGD/year) tiers.
 
 ## Completed Tasks
@@ -71,3 +71,11 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
     2.  The component displays a "Free Tier" and a "Pro Tier" (5 SGD/year) with respective features.
     3.  Integrated the `Pricing` component into the `Home.tsx` page.
     4.  Updated the `blueprint.md` file to reflect the new feature.
+
+**Update Color Scheme**
+
+*   **Objective:** To change the application's color scheme to a warmer and lighter one.
+*   **Steps:**
+    1.  Modified the root stylesheet in `App.tsx` to use a warmer, lighter background color (`stone-100`).
+    2.  Updated the colors in `Home.tsx` and `Pricing.tsx` from `slate` to `stone` to match the new color scheme.
+    3.  Updated the `blueprint.md` file to reflect the changes.

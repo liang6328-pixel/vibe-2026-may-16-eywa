@@ -98,10 +98,10 @@ const Home: React.FC = () => {
   return (
     <div className="py-12 px-4 max-w-6xl mx-auto">
       <header className="text-center mb-16">
-        <h1 className="text-6xl font-extrabold text-slate-100 tracking-tight mb-4">
+        <h1 className="text-6xl font-extrabold text-stone-800 tracking-tight mb-4">
           Your Secure Digital Legacy
         </h1>
-        <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+        <p className="text-xl text-stone-500 max-w-2xl mx-auto">
           Eywa uses advanced AI to help you organize, secure, and share your most important life documents.
         </p>
       </header>
@@ -112,20 +112,20 @@ const Home: React.FC = () => {
           return (
             <div
               key={key}
-              className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl shadow-xl p-8 hover:bg-slate-900 hover:border-orange-500/50 transition-all duration-300"
+              className="group relative bg-white/50 backdrop-blur-sm border border-stone-300 rounded-2xl shadow-xl p-8 hover:bg-white hover:border-orange-500/50 transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="mb-6 p-4 bg-slate-950 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-6 p-4 bg-stone-50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                   {vault.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-slate-100 mb-3">{vault.name}</h3>
-                <p className="text-slate-400 leading-relaxed">{vault.description}</p>
+                <h3 className="text-2xl font-bold text-stone-800 mb-3">{vault.name}</h3>
+                <p className="text-stone-500 leading-relaxed">{vault.description}</p>
               </div>
               
               <div className="mt-8 flex justify-center">
                 <button
                   onClick={() => openModal(vault.name)}
-                  className="flex items-center space-x-2 px-4 py-2 bg-slate-950 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors"
+                  className="flex items-center space-x-2 px-4 py-2 bg-stone-50 rounded-lg text-stone-500 hover:text-stone-800 hover:bg-stone-200 transition-colors"
                 >
                   <FaPlus className="text-sm" />
                   <span>Add Document</span>
@@ -138,14 +138,14 @@ const Home: React.FC = () => {
 
       <section className="mt-24 max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-100 mb-4">Chat with Eywa</h2>
-          <p className="text-slate-400">Ask questions about your vault or get help organizing your documents.</p>
+          <h2 className="text-4xl font-bold text-stone-800 mb-4">Chat with Eywa</h2>
+          <p className="text-stone-500">Ask questions about your vault or get help organizing your documents.</p>
         </div>
         
-        <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-white/50 backdrop-blur-sm border border-stone-300 rounded-3xl shadow-2xl overflow-hidden">
           <div className="h-[400px] overflow-y-auto p-8 space-y-6">
             {messages.length === 0 && (
-              <div className="h-full flex flex-col items-center justify-center text-slate-500 italic">
+              <div className="h-full flex flex-col items-center justify-center text-stone-400 italic">
                 <p>Start a conversation with Eywa...</p>
               </div>
             )}
@@ -156,8 +156,8 @@ const Home: React.FC = () => {
                 <div
                   className={`px-6 py-4 rounded-2xl max-w-[80%] text-center ${
                     message.sender === 'user' 
-                      ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-lg shadow-orange-900/20' 
-                      : 'bg-slate-800 text-slate-100 shadow-md'
+                      ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-300/20' 
+                      : 'bg-stone-200 text-stone-800 shadow-md'
                   }`}>
                   {message.text}
                 </div>
@@ -165,18 +165,18 @@ const Home: React.FC = () => {
             ))}
           </div>
           
-          <div className="p-6 bg-slate-950/50 border-t border-slate-800 flex justify-center">
-            <div className="w-full max-w-3xl flex items-center space-x-4 bg-slate-900 rounded-2xl p-2 border border-slate-800 focus-within:border-orange-500/50 transition-colors">
+          <div className="p-6 bg-stone-50/50 border-t border-stone-300 flex justify-center">
+            <div className="w-full max-w-3xl flex items-center space-x-4 bg-stone-200 rounded-2xl p-2 border border-stone-300 focus-within:border-orange-500/50 transition-colors">
               <input
                 type="text"
-                className="flex-1 bg-transparent border-none focus:ring-0 text-slate-100 px-4 py-2"
+                className="flex-1 bg-transparent border-none focus:ring-0 text-stone-800 px-4 py-2"
                 placeholder="Ask Eywa a question..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
               />
               <button
-                className="px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity"
+                className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity"
                 onClick={handleSend}>
                 Send
               </button>
