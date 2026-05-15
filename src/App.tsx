@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Vault from './pages/Vault';
+import DisqusComments from './components/DisqusComments';
 import './App.css';
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/vault/:category" element={<Vault />} />
           </Routes>
+          <DisqusComments />
         </main>
       </div>
     </BrowserRouter>
