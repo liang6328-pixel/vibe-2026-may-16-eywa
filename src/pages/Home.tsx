@@ -12,6 +12,7 @@ import UploadModal from '../components/UploadModal';
 import { storage } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import Pricing from '../components/Pricing';
+import { DiscussionEmbed } from 'disqus-react';
 
 const VAULT_STRUCTURE = {
   legal: {
@@ -188,6 +189,18 @@ const Home: React.FC = () => {
       <UploadModal isOpen={isModalOpen} onClose={closeModal} onUpload={handleUpload} vaultName={selectedVault} />
 
       <Pricing />
+
+      <div className="mt-24 max-w-4xl mx-auto">
+        <DiscussionEmbed
+            shortname='leon-chen'
+            config={{
+                url: window.location.href,
+                identifier: window.location.pathname,
+                title: 'Eywa.ai Community',
+                language: 'zh_TW'
+            }}
+        />
+      </div>
     </div>
   );
 };

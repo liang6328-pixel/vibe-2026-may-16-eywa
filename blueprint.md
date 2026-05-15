@@ -14,6 +14,7 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Document Upload:** A feature to upload documents to the vault categories using Firebase Storage.
 *   **Vivid UI:** A visually engaging and modern user interface with a warmer, lighter color scheme, and a sticky navigation bar.
 *   **Pricing Section:** A pricing section at the bottom of the home page showcasing "Free" and "Pro" (5 SGD/year) tiers.
+*   **Disqus Comments:** A Disqus comments section at the bottom of the home page to allow for user feedback and discussion.
 
 ## Completed Tasks
 
@@ -86,3 +87,11 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Steps:**
     1.  Modified `src/pages/Home.tsx` to change the order of the sections.
     2.  Updated `blueprint.md` to reflect the change.
+
+**Add Disqus Comments Section**
+
+*   **Objective:** To add a Disqus comments section to the bottom of the home page.
+*   **Steps:**
+    1.  Imported `DiscussionEmbed` from `disqus-react` in `Home.tsx`.
+    2.  Added the `DiscussionEmbed` component to the bottom of the page.
+    3.  Updated `blueprint.md` to reflect the change.
