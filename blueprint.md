@@ -48,9 +48,9 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 
 **Integrate Disqus Comments**
 
-*   **Objective:** To enable community discussion and feedback on the platform.
+*   **Objective:** To enable community discussion and feedback on the platform using the official React integration.
 *   **Steps:**
-    1.  Implemented a `DisqusComments` component using the manual script injection method.
-    2.  Configured `disqus_config` to dynamically set the URL and identifier based on the current React route.
-    3.  Handled the Disqus reset logic to ensure comments reload correctly when navigating between pages in the SPA.
+    1.  Installed and configured the official `disqus-react` library.
+    2.  Implemented the `DisqusComments` component using `DiscussionEmbed`.
+    3.  Configured dynamic URL and identifier mapping to ensure correct thread loading across the SPA.
     4.  Integrated the component at the bottom of the main application layout.
