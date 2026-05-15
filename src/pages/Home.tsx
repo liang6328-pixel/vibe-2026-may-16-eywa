@@ -106,37 +106,7 @@ const Home: React.FC = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-        {Object.keys(VAULT_STRUCTURE).map((key) => {
-          const vault = VAULT_STRUCTURE[key as keyof typeof VAULT_STRUCTURE];
-          return (
-            <div
-              key={key}
-              className="group relative bg-white/50 backdrop-blur-sm border border-stone-300 rounded-2xl shadow-xl p-8 hover:bg-white hover:border-orange-500/50 transition-all duration-300"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-6 p-4 bg-stone-50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                  {vault.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-stone-800 mb-3">{vault.name}</h3>
-                <p className="text-stone-500 leading-relaxed">{vault.description}</p>
-              </div>
-              
-              <div className="mt-8 flex justify-center">
-                <button
-                  onClick={() => openModal(vault.name)}
-                  className="flex items-center space-x-2 px-4 py-2 bg-stone-50 rounded-lg text-stone-500 hover:text-stone-800 hover:bg-stone-200 transition-colors"
-                >
-                  <FaPlus className="text-sm" />
-                  <span>Add Document</span>
-                </button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <section className="mt-24 max-w-4xl mx-auto">
+      <section className="max-w-4xl mx-auto mb-20">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-stone-800 mb-4">Chat with Eywa</h2>
           <p className="text-stone-500">Ask questions about your vault or get help organizing your documents.</p>
@@ -184,6 +154,36 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {Object.keys(VAULT_STRUCTURE).map((key) => {
+          const vault = VAULT_STRUCTURE[key as keyof typeof VAULT_STRUCTURE];
+          return (
+            <div
+              key={key}
+              className="group relative bg-white/50 backdrop-blur-sm border border-stone-300 rounded-2xl shadow-xl p-8 hover:bg-white hover:border-orange-500/50 transition-all duration-300"
+            >
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6 p-4 bg-stone-50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                  {vault.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-stone-800 mb-3">{vault.name}</h3>
+                <p className="text-stone-500 leading-relaxed">{vault.description}</p>
+              </div>
+              
+              <div className="mt-8 flex justify-center">
+                <button
+                  onClick={() => openModal(vault.name)}
+                  className="flex items-center space-x-2 px-4 py-2 bg-stone-50 rounded-lg text-stone-500 hover:text-stone-800 hover:bg-stone-200 transition-colors"
+                >
+                  <FaPlus className="text-sm" />
+                  <span>Add Document</span>
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
       <UploadModal isOpen={isModalOpen} onClose={closeModal} onUpload={handleUpload} vaultName={selectedVault} />
 

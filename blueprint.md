@@ -10,7 +10,7 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Dashboard:** A user-friendly dashboard that provides a clear overview of the vault categories.
 *   **Routing:** A robust routing system using `react-router-dom`.
 *   **Styling:** A clean and modern user interface styled with Tailwind CSS.
-*   **Chat:** A basic chat interface that allows users to interact with the Eywa AI.
+*   **Chat:** A basic chat interface that allows users to interact with the Eywa AI, now positioned above the vault categories.
 *   **Document Upload:** A feature to upload documents to the vault categories using Firebase Storage.
 *   **Vivid UI:** A visually engaging and modern user interface with a warmer, lighter color scheme, and a sticky navigation bar.
 *   **Pricing Section:** A pricing section at the bottom of the home page showcasing "Free" and "Pro" (5 SGD/year) tiers.
@@ -79,3 +79,10 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
     1.  Modified the root stylesheet in `App.tsx` to use a warmer, lighter background color (`stone-100`).
     2.  Updated the colors in `Home.tsx` and `Pricing.tsx` from `slate` to `stone` to match the new color scheme.
     3.  Updated the `blueprint.md` file to reflect the changes.
+
+**Reorder Chat and Vault Sections**
+
+*   **Objective:** To move the "Chat with Eywa" section above the vault categories.
+*   **Steps:**
+    1.  Modified `src/pages/Home.tsx` to change the order of the sections.
+    2.  Updated `blueprint.md` to reflect the change.
