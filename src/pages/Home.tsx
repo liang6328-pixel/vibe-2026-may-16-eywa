@@ -192,7 +192,7 @@ const Home: React.FC = () => {
 
       <div className="mt-24 max-w-4xl mx-auto">
         <DiscussionEmbed
-            shortname='leon-chen'
+            shortname='vibe-2026-may-16-eywa'
             config={{
                 url: window.location.href,
                 identifier: window.location.pathname,

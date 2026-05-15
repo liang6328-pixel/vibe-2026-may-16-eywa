@@ -94,4 +94,5 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 *   **Steps:**
     1.  Imported `DiscussionEmbed` from `disqus-react` in `Home.tsx`.
     2.  Added the `DiscussionEmbed` component to the bottom of the page.
-    3.  Updated `blueprint.md` to reflect the change.
+    3.  Updated the Disqus shortname to `vibe-2026-may-16-eywa`.
+    4.  Updated `blueprint.md` to reflect the change.
