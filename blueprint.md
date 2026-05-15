@@ -8,11 +8,12 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
 
 *   **Digital Vault:** A secure and organized digital vault with predefined categories (Legal, Financial, Medical, History, End of Life).
 *   **Dashboard:** A user-friendly dashboard that provides a clear overview of the vault categories.
-*   **Routing:** A basic routing system for the application.
+*   **Routing:** A robust routing system using `react-router-dom`.
 *   **Styling:** A clean and modern user interface styled with Tailwind CSS.
 *   **Chat:** A basic chat interface that allows users to interact with the Eywa AI.
 *   **Document Upload:** A feature to upload documents to the vault categories using Firebase Storage.
-*   **Vivid UI:** A visually engaging and modern user interface with a new color scheme, icons, and improved layout.
+*   **Vivid UI:** A visually engaging and modern user interface with a dark theme, vibrant accents, and a sticky navigation bar.
+*   **Pricing:** A detailed pricing page showcasing Free, Professional, and Family tiers.
 
 ## Completed Tasks
 
@@ -54,3 +55,13 @@ Eywa.ai is a secure digital vault designed to help users organize, store, and ma
     2.  Implemented the `DisqusComments` component using `DiscussionEmbed`.
     3.  Configured dynamic URL and identifier mapping to ensure correct thread loading across the SPA.
     4.  Integrated the component at the bottom of the main application layout.
+
+**Add Pricing and Navigation**
+
+*   **Objective:** To provide users with clear plan options and improved site navigation.
+*   **Steps:**
+    1.  Created a new `Pricing` page with a three-tier structure (Free, Professional, Family).
+    2.  Updated the navigation bar to include "Home" and "Pricing" links.
+    3.  Made the navigation bar sticky with a glassmorphism effect (backdrop-blur).
+    4.  Added a "Log In" button to the header to simulate authentication entry.
+    5.  Registered the new pricing route in the main `App` component.
