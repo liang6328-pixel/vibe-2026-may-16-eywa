@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Vault from './pages/Vault';
-import Pricing from './pages/Pricing';
 import DisqusComments from './components/DisqusComments';
 import './App.css';
 
@@ -19,7 +18,6 @@ const App: React.FC = () => {
               </Link>
               <div className="flex items-center gap-8">
                 <Link to="/" className="text-sm font-medium text-slate-400 hover:text-white transition-colors">Home</Link>
-                <Link to="/pricing" className="text-sm font-medium text-slate-400 hover:text-white transition-colors">Pricing</Link>
                 <button className="px-5 py-2 rounded-full bg-slate-800 text-sm font-semibold text-white hover:bg-slate-700 transition-all border border-slate-700">
                   Log In
                 </button>
@@ -31,7 +29,6 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/vault/:category" element={<Vault />} />
-            <Route path="/pricing" element={<Pricing />} />
           </Routes>
           <DisqusComments />
         </main>
